@@ -9,6 +9,6 @@ deployment:
     commands:
     - mvn clean install
   
-   override:
+   post:
     - mkdir ${CIRCLE_ARTIFACTS}/war
     - cp -R ./target/*.war ${CIRCLE_ARTIFACTS}/war/
