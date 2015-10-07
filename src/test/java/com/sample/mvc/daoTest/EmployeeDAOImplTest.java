@@ -97,9 +97,9 @@ public class EmployeeDAOImplTest {
 		when(sessionFactory.getCurrentSession()).thenReturn(session);
 		when(session.get(EmployeeCommand.class,getId)).thenReturn(emp);
 		//System.out.println(employeeDaoImpl.getEmployeebyId(getId).getCity());
-		//assertEquals("pune",employeeDaoImpl.getEmployeebyId(getId).getCity());
+		assertEquals("pune",employeeDaoImpl.getEmployeebyId(getId).getCity());
 		//for failing in circle ci
-		assertEquals("punee",employeeDaoImpl.getEmployeebyId(getId).getCity());
+		//assertEquals("punee",employeeDaoImpl.getEmployeebyId(getId).getCity());
 	}
 	
 	
