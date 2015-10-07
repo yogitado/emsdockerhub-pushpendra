@@ -1,0 +1,7 @@
+analyseLocally=true
+eclipse.preferences.version=1
+extraProperties=
+lastAnalysisDate=1384343250840
+projectKey=com.alm.web\:EmployeeManagementSystem
+serverUrl=http\://localhost\:9000/sonar
+version=2
