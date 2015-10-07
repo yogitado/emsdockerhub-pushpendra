@@ -1,7 +1,5 @@
-test:
-  override:
-    - mkdir ${CIRCLE_ARTIFACTS}/war
-    - cp -R ./target/*.war ${CIRCLE_ARTIFACTS}/war/
+
+ 
 
 
 
@@ -10,3 +8,7 @@ deployment:
     branch: master
     commands:
     - mvn clean install
+  
+   override:
+    - mkdir ${CIRCLE_ARTIFACTS}/war
+    - cp -R ./target/*.war ${CIRCLE_ARTIFACTS}/war/
