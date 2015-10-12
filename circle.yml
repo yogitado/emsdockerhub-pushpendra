@@ -4,5 +4,5 @@ deployment:
     commands:
     - mkdir ${CIRCLE_ARTIFACTS}/war
     - cp -R ./target/*.war ${CIRCLE_ARTIFACTS}/war/
-    - $DOCKERHUB_TRIGGER
+    - $DOCKERHUB_TRIGGER2
   
