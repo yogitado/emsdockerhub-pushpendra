@@ -85,7 +85,7 @@ a:hover {color:#80A24A;}   /* mouse over link */
     </div>
 </div>
 <div class="smart-green" >
-<h1>Employee Details</h1>
+<h1>Employee Info</h1>
 		<table>
 			<tr>
 			   <th><label>Code</label></th>
