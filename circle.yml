@@ -4,7 +4,7 @@ machine:
     
 test:
   post:
-    - docker built -t ems_deployimage:$CIRCLE_SHA1 .
+    - docker build -t ems_deployimage:$CIRCLE_SHA1 .
     
 deployment:
   hub:
