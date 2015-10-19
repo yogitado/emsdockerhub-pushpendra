@@ -19,7 +19,7 @@ ENV PATH $CATALINA_HOME/bin:$PATH
 
 RUN apt-get install -y wget
 
-RUN wget -O /var/lib/tomcat7/webapps/EmployeeApplication.war https://circle-artifacts.com/gh/pushpendrad/emsdockerhub/16/artifacts/0/tmp/circle-artifacts.Aul0cx0/war/EmployeeApplication.war
+COPY ./target/*.war /var/lib/tomcat7/webapps/EmployeeApplication.war 
 EXPOSE 8080
  
 CMD ["catalina.sh", "run"]
