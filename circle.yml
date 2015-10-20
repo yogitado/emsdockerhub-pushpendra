@@ -13,5 +13,5 @@ deployment:
     - mkdir ${CIRCLE_ARTIFACTS}/war
     - cp -R ./target/*.war ${CIRCLE_ARTIFACTS}/war/
     - docker login -e $DOCKER_EMAIL -u $DOCKER_USER -p $DOCKER_PASS
-   # - docker push pushpendrad/ems_deployimage:$CIRCLE_SHA1
+    # - docker push pushpendrad/ems_deployimage:$CIRCLE_SHA1
     - docker push pushpendrad/emsdeployimage
