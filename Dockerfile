@@ -10,7 +10,10 @@ MAINTAINER pushpendra,puneet,madhu
 RUN apt-get update
 RUN apt-get install -y openjdk-7-jdk
 RUN apt-get install -y tomcat7
-
+ 
+RUN adduser root
+RUN echo "root:root" | chpasswd
+ 
 ENV CATALINA_HOME /usr/share/tomcat7/
 ENV CATALINA_BASE /var/lib/tomcat7/
 ENV PATH $CATALINA_HOME/bin:$PATH
