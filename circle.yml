@@ -4,6 +4,7 @@ machine:
     
 test:
   post:
+    - mvn clean install
     - docker build -t pushpendrad/emsdockerhub:$CIRCLE_BUILD_NUM .
     
 deployment:
