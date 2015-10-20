@@ -27,8 +27,6 @@ EXPOSE 8080
  
 CMD ["catalina.sh", "run"]
 
-
-
 #inastalling git jdk and maven
 #RUN apt-get update && apt-get install -y git maven openjdk-7-jdk
 #Setting timezone to match time zone of sonar server
