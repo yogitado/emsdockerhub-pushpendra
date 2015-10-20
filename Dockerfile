@@ -7,7 +7,7 @@ LABEL Description="This image is used for github->circleci->dockerhub->tutum->aw
 # File Author / Maintainer
 MAINTAINER pushpendra,puneet,madhu
 
-RUN sudo apt-get update
+RUN apt-get update
 
 #RUN sudo apt-get install -y openjdk-7-jdk
 RUN apt-get install -y --no-install-recommends openjdk-7-jdk
