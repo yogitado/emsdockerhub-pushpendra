@@ -5,7 +5,10 @@ machine:
 test:
   post:
     - mvn clean install
-    - docker build -t pushpendrad/emsdockerhub:latest.$CIRCLE_BUILD_NUM .
+   # - docker build -t pushpendrad/emsdockerhub .
+    - ID=$(docker build -t pushpendrad/emsdockerhub .) # This build and tag the image with creack/node:latest
+    - docker tag $ID pushpendrad/emsdockerhub:$CIRCLE_BUILD_NUM  # Add a new tag
+
     
 deployment:
   hub:
@@ -15,5 +18,7 @@ deployment:
     - cp -R ./target/*.war ${CIRCLE_ARTIFACTS}/war/
     - docker login -e $DOCKER_EMAIL -u $DOCKER_USER -p $DOCKER_PASS
     # - docker push pushpendrad/ems_deployimage:$CIRCLE_SHA1
-    - docker push pushpendrad/emsdockerhub
+    - docker push pushpendrad/emsdockerhub:$CIRCLE_BUILD_NUM
     #-docker push pushpendrad/emsdeployimage
+    - docker tag $ID pushpendrad/emsdockerhub:latest   # You can use this and skip the -t part from build
+    - docker push pushpendrad/emsdockerhub:latest
