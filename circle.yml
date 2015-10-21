@@ -18,9 +18,8 @@ deployment:
     - cp -R ./target/*.war ${CIRCLE_ARTIFACTS}/war/
     - docker login -e $DOCKER_EMAIL -u $DOCKER_USER -p $DOCKER_PASS
     # - docker push pushpendrad/ems_deployimage:$CIRCLE_SHA1
-    
-    - docker tag pushpendrad/emsdockerhub pushpendrad/emsdockerhub:$latest
-    - docker push pushpendrad/emsdockerhub:latest
+  
+    - docker push pushpendrad/emsdockerhub
     
     - docker tag pushpendrad/emsdockerhub pushpendrad/emsdockerhub:$CIRCLE_BUILD_NUM
     - docker push pushpendrad/emsdockerhub:$CIRCLE_BUILD_NUM
