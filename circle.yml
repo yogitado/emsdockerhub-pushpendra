@@ -21,7 +21,7 @@ deployment:
     # - docker push pushpendrad/ems_deployimage:$CIRCLE_SHA1
   
     
-    - docker tag pushpendrad/emsdockerhub:$COMMIT tutum.co/$TUTUM_USER/pushpendrad_emsdockerhub:$COMMIT
+    - docker tag pushpendrad_emsdockerhub:$COMMIT tutum.co/$TUTUM_USER/pushpendrad_emsdockerhub:$COMMIT
     
     - docker push tutum.co/$TUTUM_USER/pushpendrad_emsdockerhub:$COMMIT
     
