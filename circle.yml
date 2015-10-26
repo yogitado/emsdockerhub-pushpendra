@@ -16,10 +16,8 @@ deployment:
     commands:
     - mkdir ${CIRCLE_ARTIFACTS}/war
     - cp -R ./target/*.war ${CIRCLE_ARTIFACTS}/war/
-    - docker login tutum.co 
-      Username:pushpendrad
-      Password:ponchi1290.
-      Email:pushpendrad.devangan25@gmail.com
+    - docker login -e $DOCKER_EMAIL -u $DOCKER_USER -p -$DOCKER_PASS tutum.co 
+     
     # - docker push pushpendrad/ems_deployimage:$CIRCLE_SHA1
   
     
