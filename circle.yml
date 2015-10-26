@@ -7,7 +7,7 @@ test:
     #- mvn clean install
    # - docker build -t pushpendrad/emsdockerhub .
    # - docker build -t pushpendrad/emsdockerhub:$CIRCLE_BUILD_NUM .
-    - docker build -t pushpendrad/emsdockerhub .
+    - docker build -t pushpendrad/emsdockerhub:$COMMIT .
 
     
 deployment:
@@ -16,13 +16,13 @@ deployment:
     commands:
     - mkdir ${CIRCLE_ARTIFACTS}/war
     - cp -R ./target/*.war ${CIRCLE_ARTIFACTS}/war/
-    - docker login -e $DOCKER_EMAIL -u $DOCKER_USER -p $DOCKER_PASS
+    - docker login tutum.co -e $DOCKER_EMAIL -u $DOCKER_USER -p $DOCKER_PASS
     # - docker push pushpendrad/ems_deployimage:$CIRCLE_SHA1
   
-    - docker push pushpendrad/emsdockerhub
     
-    - docker tag pushpendrad/emsdockerhub pushpendrad/emsdockerhub:$CIRCLE_BUILD_NUM
-    - docker push pushpendrad/emsdockerhub:$CIRCLE_BUILD_NUM
+    - docker tag pushpendrad/emsdockerhub:$COMMIT tutum.co/$DOCKER_USER/pushpendrad/emsdockerhub:$COMMIT
+    
+    - docker push tutum.co/$DOCKER_USER/pushpendrad/emsdockerhub:$COMMIT
     
     #-docker push pushpendrad/emsdeployimage
     ##- docker build -t pushpendrad/emsdockerhub:$latest .
