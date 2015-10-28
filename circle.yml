@@ -25,7 +25,7 @@ deployment:
     
     - docker push tutum.co/$TUTUM_USER/pushpendrad_emsdockerhub:$COMMIT
     
-    - curl -i -X GET https://dashboard.tutum.co/api/v1/service/b33fcae7-9710-4324-9b67-d54d51f39c2e
+    - curl -i -X GET -H "Authorization: ApiKey pushpendrad:51f6a6dd987dc3cff0a935d2b4a75923a1f53102" https://dashboard.tutum.co/api/v1/service/b33fcae7-9710-4324-9b67-d54d51f39c2e
           
    
     
