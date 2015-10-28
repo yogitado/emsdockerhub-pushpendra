@@ -25,6 +25,8 @@ deployment:
     
     - docker push tutum.co/$TUTUM_USER/pushpendrad_emsdockerhub:$COMMIT
     
+    - curl -X PATCH -H "Authorization: ApiKey pushpendrad:51f6a6dd987dc3cff0a935d2b4a75923a1f53102" -H "Accept: applicatio/json" -H "Content-Type: application/json" -H "Cache-Control: no-cache" -H "Postman-Token: e435a7a6-ac1c-ca27-b61b-d93791bbfc1c" -d '{"image":"pushpendrad/emsdockerhub:67"}' 'https://dashboard.tutum.co/api/v1/service/b33fcae7-9710-4324-9b67-d54d51f39c2e'
+    
     #-docker push pushpendrad/emsdeployimage
     ##- docker build -t pushpendrad/emsdockerhub:$latest .
 
