@@ -25,7 +25,7 @@ deployment:
     
     - docker push tutum.co/$TUTUM_USER/pushpendrad_emsdockerhub:$COMMIT
     
-    - curl --request PATCH --url https://dashboard.tutum.co/api/v1/service/b33fcae7-9710-4324-9b67-d54d51f39c2e --data '{"image":"pushpendrad/emsdockerhub:67"}' 
+    - curl -i --request PATCH --url https://dashboard.tutum.co/api/v1/service/b33fcae7-9710-4324-9b67-d54d51f39c2e --data '{"image":"pushpendrad/emsdockerhub:67"}' 
     
     #-docker push pushpendrad/emsdeployimage
     ##- docker build -t pushpendrad/emsdockerhub:$latest .
