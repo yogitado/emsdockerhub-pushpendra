@@ -1,8 +1,7 @@
 machine:
   services:
     - docker
-    - curl
-    
+
 test:
   post:
     #- mvn clean install
