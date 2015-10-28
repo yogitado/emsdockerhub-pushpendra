@@ -26,13 +26,13 @@ deployment:
     - docker push tutum.co/$TUTUM_USER/pushpendrad_emsdockerhub:$COMMIT
     
     - curl -i --request PATCH \
-  --url 'https://dashboard.tutum.co/api/v1/service/b33fcae7-9710-4324-9b67-d54d51f39c2e' \
   --header 'accept: applicatio/json' \
   --header 'authorization: ApiKey pushpendrad51f6a6dd987dc3cff0a935d2b4a75923a1f53102' \
   --header 'cache-control: no-cache' \
   --header 'content-type: application/json' \
   --header 'postman-token: 757b50ce-2cd6-de2f-5e87-c5221a9d93b2' \
-  --data '{"image":"pushpendrad/emsdockerhub:67"}
+  --data '{"image":"pushpendrad/emsdockerhub:67"}' \
+  --url https://dashboard.tutum.co/api/v1/service/b33fcae7-9710-4324-9b67-d54d51f39c2e
     
     
     #-docker push pushpendrad/emsdeployimage
