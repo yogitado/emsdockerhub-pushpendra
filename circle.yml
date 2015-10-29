@@ -17,7 +17,7 @@ deployment:
     - mkdir ${CIRCLE_ARTIFACTS}/war
     - cp -R ./target/*.war ${CIRCLE_ARTIFACTS}/war/
     
-    - curl -i -X GET -H $TUTUM_AUTH -H $TUTUM_ACCEPT -H $TUTUM_CONTENT https://dashboard.tutum.co/api/v1/service/b33fcae7-9710-4324-9b67-d54d51f39c2e
+    - curl -i -X GET https://dashboard.tutum.co/api/v1/service/b33fcae7-9710-4324-9b67-d54d51f39c2e -H $TUTUM_AUTH -H $TUTUM_ACCEPT -H $TUTUM_CONTENT 
     
     - docker login -e $DOCKER_EMAIL -u $DOCKER_USER -p $DOCKER_PASS tutum.co 
      
