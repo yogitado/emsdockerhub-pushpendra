@@ -17,7 +17,6 @@ deployment:
     - mkdir ${CIRCLE_ARTIFACTS}/war
     - cp -R ./target/*.war ${CIRCLE_ARTIFACTS}/war/
     
-    
     - curl -i -X GET -H $TUTUM_AUTH -H $TUTUM_ACCEPT -H $TUTUM_CONTENT https://dashboard.tutum.co/api/v1/service/b33fcae7-9710-4324-9b67-d54d51f39c2e
     
     - docker login -e $DOCKER_EMAIL -u $DOCKER_USER -p $DOCKER_PASS tutum.co 
@@ -26,10 +25,6 @@ deployment:
     - docker tag pushpendrad_emsdockerhub:$COMMIT tutum.co/$TUTUM_USER/pushpendrad_emsdockerhub:$COMMIT
     
     - docker push tutum.co/$TUTUM_USER/pushpendrad_emsdockerhub:$COMMIT
-    
-    
-          
-   
     
     
     #-docker push pushpendrad/emsdeployimage
