@@ -15,17 +15,9 @@
 			<url>http://repo.springsource.org/libs-milestone</url>
 		</repository>
 	</repositories>
-
-
-
-
-
 	<dependencies>
-	                
-	  	<!-- Selenium -->
-	 
-
-		<dependency>
+	<!-- Selenium -->
+	 	<dependency>
 			<groupId>org.seleniumhq.selenium</groupId>
 			<artifactId>selenium-firefox-driver</artifactId>
 			<version>2.42.2</version>
@@ -36,11 +28,7 @@
 			<artifactId>selenium-server</artifactId>
 			<version>2.42.2</version>
 		</dependency>
-
-	
-	
-	                
-	                	<!--           <dependency> <groupId>com.fasterxml.jackson.core</groupId> <artifactId>jackson-core</artifactId> 
+	<!--           <dependency> <groupId>com.fasterxml.jackson.core</groupId> <artifactId>jackson-core</artifactId> 
 			<version>2.2.1</version> <scope>test</scope> </dependency> <dependency> <groupId>com.fasterxml.jackson.core</groupId> 
 			<artifactId>jackson-databind</artifactId> <version>2.2.1</version> <scope>test</scope> 
 			</dependency> <dependency> <groupId>org.hamcrest</groupId> <artifactId>hamcrest-all</artifactId> 
@@ -224,7 +212,7 @@
 	</dependencies>
 
 	<build>
-		<finalName>EmployeeApplication_$GIT_COMMIT</finalName>
+		<finalName>EmployeeApplication_${env.GIT_COMMIT}</finalName>
 		<plugins>
 				<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
