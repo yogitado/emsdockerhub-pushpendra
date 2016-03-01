@@ -11,3 +11,4 @@ jdk:
 script:
    - pwd
    - mvn clean install
+   - docker build -t "emsdockerhub" .
