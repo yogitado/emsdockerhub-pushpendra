@@ -1,5 +1,5 @@
 # Build Environment
-build_environment: ubuntu1204
+build_environment: ubuntu1404
 
 # language setting
 language: java
@@ -9,6 +9,9 @@ jdk:
  - openjdk7
  
 script:
+   - curl -sSL https://get.docker.com/ | sh
+   - curl -sSL https://get.docker.com/gpg | sudo apt-key add -
+   - ls
    - pwd
    - mvn clean install
    - docker build -t "emsdockerhub" .
