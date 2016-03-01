@@ -9,4 +9,5 @@ jdk:
  - openjdk7
  
 script:
+   - pwd
    - mvn clean install
