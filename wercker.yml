@@ -1,11 +1,10 @@
-box: wercker/android
-
+box: mihkels/java8-oracle@0.0.1
 build:
   steps:
     - script:
+        name: Show base information
           code: |
             gradle -v
-            mvn -v
             echo $JAVA_HOME
             java -version
             javac -version
