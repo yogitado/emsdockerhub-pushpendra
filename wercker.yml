@@ -1,0 +1,6 @@
+box: pushpendrad/emsdockerhub
+
+build:
+    steps:
+        - java -version
+        - mvn clean install
