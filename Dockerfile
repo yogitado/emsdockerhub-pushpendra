@@ -11,7 +11,7 @@ RUN apt-get update
 
 #RUN sudo apt-get install -y openjdk-7-jdk
 RUN apt-get install -y --no-install-recommends openjdk-7-jdk
-
+RUN apt-get install -y maven
 RUN sudo apt-get install -y tomcat7
  
 ENV CATALINA_HOME /usr/share/tomcat7/
