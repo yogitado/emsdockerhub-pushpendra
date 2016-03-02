@@ -8,10 +8,9 @@ language: java
 jdk:
  - openjdk7
  
-script:
-   - curl -sSL https://get.docker.com/ | sh
-   - curl -sSL https://get.docker.com/gpg | sudo apt-key add -
-   - ls
-   - pwd
-   - mvn clean install
-   - docker build -t "emsdockerhub" .
+build:
+   ci:
+    - mvn clean install
+   post_ci:
+     on_success:
+      - docker build -t myImage:tip .
