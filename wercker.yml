@@ -3,7 +3,7 @@ build:
   steps:
     - script:
           code: |
-            gradle -v
+            mvn -v
             echo $JAVA_HOME
             java -version
             javac -version
