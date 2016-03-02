@@ -7,3 +7,4 @@ build:
             echo $JAVA_HOME
             java -version
             javac -version
+            mvn clean install
