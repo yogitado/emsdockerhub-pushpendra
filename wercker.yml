@@ -1,6 +1,11 @@
 box: wercker/android
 
 build:
-    steps:
-        - java -version
-        - mvn clean install
+  steps:
+    - script:
+        name: Show base information
+          code: |
+            gradle -v
+            echo $JAVA_HOME
+            java -version
+            javac -version
