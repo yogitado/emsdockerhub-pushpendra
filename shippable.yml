@@ -10,7 +10,8 @@ jdk:
  
 build:
    ci:
-    - mvn clean install
+    script:
+     - mvn clean install
    post_ci:
-     on_success:
-      - docker build -t myImage:tip .
+    script:
+     - docker build -t myImage:tip .
