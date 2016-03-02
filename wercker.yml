@@ -3,9 +3,9 @@ box: wercker/android
 build:
   steps:
     - script:
-        name: Show base information
           code: |
             gradle -v
+            mvn -v
             echo $JAVA_HOME
             java -version
             javac -version
