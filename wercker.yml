@@ -1,4 +1,4 @@
-box: franciscocpg/ubuntu14.04
+box: silviuburceadev/docker-ubuntu-java-maven
 build:
   steps:
     - script:
