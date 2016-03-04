@@ -1,6 +1,10 @@
 java:
   java_version: java-7-openjdk
   maven_version: '3.3.3'  # See our Java documentation for versions
+
+hooks:
+  pre_setup: ./script/prehook.sh
+
 tests:
   - type: junit
     command: mvn clean install
