@@ -23,7 +23,7 @@ deployment:
     codedeploy:
       circleci-demo-app:
         application_root: 
-          - ./target
+          - /target
           - appspec.yml
         region: us-east-1
         revision_location:
