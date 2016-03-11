@@ -24,7 +24,7 @@ deployment:
       circleci-demo-app:
         application_root: 
           - /target
-          - appspec.yml
+          - /appspec.yml
         region: us-east-1
         revision_location:
           revision_type: S3
